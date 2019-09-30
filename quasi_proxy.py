@@ -36,14 +36,14 @@ def __replace_path(bs: BeautifulSoup, site: str) -> None:
         _replace_attr(attr_name)
 
 
-def __add_tm(bs: BeautifulSoup) -> None:
+def __add_tm(bs: BeautifulSoup) -> bool:
     """
     Add trademark to six-letter words
 
     Receives BS instance, trying to find all text elements
     and call the replacement function
     :param bs: BeautifulSoup
-    :return: None
+    :return: bool
     """
 
     def _el_filter(element):
